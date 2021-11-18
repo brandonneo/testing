@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit 	colors="true"
+			convertErrorsToExceptions="true"
+			convertNoticesToExceptions="true"
+			convertWarningsToExceptions="true"
+			processIsolation="false"
+            cacheResult="false"
+			stopOnFailure="false">
+	<testsuites>
+		<testsuite name="Test Suite">
+			<directory>tests</directory>
+		</testsuite>
+	</testsuites>
+</phpunit>
+
+<!-- <?xml version="1.0" encoding="UTF-8" ?>
+<phpunit 
+    colors="true"
+    stopOnFailure="false">
+
+    <testsuites>
+        <testsuite name="eyd0tTests">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
+ -->
