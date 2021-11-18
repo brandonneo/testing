@@ -3,7 +3,7 @@ pipeline {
  stages {
  stage ('Checkout') {
  steps {
- git branch:'master', url: 'https://github.com/OWASP/Vulnerable-WebApplication.git'
+ git branch:'main', url: 'https://github.com/brandonneo/testing.git'
  }
  }
 
@@ -12,8 +12,7 @@ pipeline {
  script {
  def scannerHome = tool 'SonarQube';
  withSonarQubeEnv('SonarQube') {
- sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=OWSAP -
-Dsonar.sources=."
+ sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=OWSAP -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000 -Dsonar.login=cb38db110cd5441f33ddba33285e39e2ecbebbf9"
  }
  }
  }
